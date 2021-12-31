@@ -25,7 +25,6 @@ const devConfig = {
 }
 
 module.exports = async function () {
-  console.log(1111)
   try {
     const port = await portfinder.getPortPromise()
     devConfig.devServer.port = port

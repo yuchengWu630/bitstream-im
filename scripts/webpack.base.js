@@ -6,8 +6,6 @@ const { separator } = require('./utils/constant')
 const packages = process.env.packages.split(separator)
 const { entry, htmlPlugins } = getEntryTemplate(packages)
 
-console.log(htmlPlugins)
-
 module.exports = {
   // 动态替换入口
   entry,
