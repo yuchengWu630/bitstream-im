@@ -5,9 +5,12 @@ const portfinder = require('portfinder')
 const { BASE_PORT } = require('./utils/constant')
 
 // portfinder.basePort = BASE_PORT
+process.env.NODE_ENV = 'development'
 
+console.log(process.env.NODE_ENV)
 const devConfig = {
   mode: 'development',
+  devtool: 'eval-cheap-module-source-map',
   devServer: {
     // static 允许我们在devServer下访问目录的静态资源
     // 简单来说 启动DevServer相当于启动了一台本地服务器
@@ -21,7 +24,8 @@ const devConfig = {
     // 是否开启代码压缩
     compress: true,
     port: BASE_PORT
-  }
+  },
+  stats: 'errors-only'
 }
 
 module.exports = async function () {

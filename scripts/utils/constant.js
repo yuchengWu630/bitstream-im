@@ -5,7 +5,7 @@ const MAIN_FILE = 'index.tsx'
 // 打印的颜色
 const error = chalk.bold.red
 const warning = chalk.hex('#ffb2b2')
-const success = chalk.hex('#92ff85')
+const success = chalk.green
 const maps = {
   success,
   warning,

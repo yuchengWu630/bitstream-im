@@ -2,6 +2,8 @@ const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const { getEntryTemplate } = require('./utils/entry')
 const { separator } = require('./utils/constant')
+const chalk = require("chalk");
+// const ProgressBarPlugin = require("progress-bar-webpack-plugin");
 
 const packages = process.env.packages.split(separator)
 const { entry, htmlPlugins } = getEntryTemplate(packages)

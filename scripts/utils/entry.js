@@ -14,7 +14,6 @@ fs.readdirSync(dirPath).filter(file => {
   const entryPath = path.join(dirPath, file)
   if (fs.statSync(entryPath)) entry[file] = path.join(entryPath, MAIN_FILE)
 })
-console.log('@@@@', entry)
 // 根据入口文件list生成对应的htmlWebpackPlugin
 // 同时返回对应wepback需要的入口和htmlWebpackPlugin
 const getEntryTemplate = packages => {
